@@ -1,0 +1,47 @@
+//
+//  LoginViewController.swift
+//  Trip-Planner
+//
+//  Created by Kaichi Momose on 2017/12/06.
+//  Copyright © 2017 Kaichi Momose. All rights reserved.
+//
+
+import UIKit
+
+class LoginViewController: UIViewController {
+
+    @IBOutlet weak var userNameTextField: UITextField!
+    @IBOutlet weak var passWordTextField: UITextField!
+    @IBOutlet weak var signInButton: UIButton!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func signInButtonTapped(_ sender: Any) {
+        let userName = userNameTextField.text
+        if let userName = userName {
+            
+        } else {
+            
+        }
+    }
+    
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
+}
