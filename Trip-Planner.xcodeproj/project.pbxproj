@@ -17,7 +17,7 @@
 		BF9B20E21FD8D65500776A67 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9B20E11FD8D65500776A67 /* LoginViewController.swift */; };
 		BF9B20E41FD8D6C100776A67 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9B20E31FD8D6C100776A67 /* SignUpViewController.swift */; };
 		BF9B20E91FD8D90500776A67 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9B20E51FD8D90500776A67 /* Enums.swift */; };
-		BF9B20EA1FD8D90500776A67 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9B20E61FD8D90500776A67 /* Post.swift */; };
+		BF9B20EA1FD8D90500776A67 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9B20E61FD8D90500776A67 /* User.swift */; };
 		BF9B20EB1FD8D90500776A67 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9B20E71FD8D90500776A67 /* Networking.swift */; };
 		BF9B20EC1FD8D90500776A67 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9B20E81FD8D90500776A67 /* Comment.swift */; };
 		BF9B20EE1FD8FFD600776A67 /* BasicAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9B20ED1FD8FFD600776A67 /* BasicAuth.swift */; };
@@ -36,7 +36,7 @@
 		BF9B20E11FD8D65500776A67 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BF9B20E31FD8D6C100776A67 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		BF9B20E51FD8D90500776A67 /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
-		BF9B20E61FD8D90500776A67 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		BF9B20E61FD8D90500776A67 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BF9B20E71FD8D90500776A67 /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		BF9B20E81FD8D90500776A67 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		BF9B20ED1FD8FFD600776A67 /* BasicAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicAuth.swift; sourceTree = "<group>"; };
@@ -72,11 +72,11 @@
 		BF9B20C81FD8BEE200776A67 /* Trip-Planner */ = {
 			isa = PBXGroup;
 			children = (
-				BF9B20E81FD8D90500776A67 /* Comment.swift */,
 				BF9B20ED1FD8FFD600776A67 /* BasicAuth.swift */,
 				BF9B20E51FD8D90500776A67 /* Enums.swift */,
 				BF9B20E71FD8D90500776A67 /* Networking.swift */,
-				BF9B20E61FD8D90500776A67 /* Post.swift */,
+				BF9B20E61FD8D90500776A67 /* User.swift */,
+				BF9B20E81FD8D90500776A67 /* Comment.swift */,
 				BF9B20C91FD8BEE200776A67 /* AppDelegate.swift */,
 				BF9B20E11FD8D65500776A67 /* LoginViewController.swift */,
 				BF9B20E31FD8D6C100776A67 /* SignUpViewController.swift */,
@@ -173,7 +173,7 @@
 				BF9B20EB1FD8D90500776A67 /* Networking.swift in Sources */,
 				BF9B20CA1FD8BEE200776A67 /* AppDelegate.swift in Sources */,
 				BF9B20EE1FD8FFD600776A67 /* BasicAuth.swift in Sources */,
-				BF9B20EA1FD8D90500776A67 /* Post.swift in Sources */,
+				BF9B20EA1FD8D90500776A67 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

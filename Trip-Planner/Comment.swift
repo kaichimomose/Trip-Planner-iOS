@@ -8,41 +8,43 @@
 
 import Foundation
 
-struct CommentsList: Decodable {
-    let comments: [Comment]
+struct TripsList: Decodable {
+    let trips: [Trip]
 }
 
-struct Comment {
-    let body: String
-    let name: String
+struct Trip {
+    let id: Int
     let username: String
-    let size: URL
+    let tripName: String
+    let date: String
+    let waypoints: [String]
+    let completed: Bool
 }
 
-extension Comment: Decodable {
+extension Trip: Decodable {
+    
     enum Keys: String, CodingKey {
-        case body
-        case user
-    }
-    
-    enum UserKeys: String, CodingKey {
+        case id
         case username
-        case name
-        case imageUrl = "image_url"
+        case trips
     }
     
-    enum ImageUrlKeys: String, CodingKey {
-        case size = "48px"
+    enum TripKeys: String, CodingKey {
+        case tripName = "trip_name"
+        case date
+        case waypoints
+        case completed
     }
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: Keys.self)
-        let body = try container.decode(String.self, forKey: .body)
-        let user = try container.nestedContainer(keyedBy: UserKeys.self, forKey: .user)
-        let name = try user.decode(String.self, forKey: .name)
-        let username = try user.decode(String.self, forKey: .username)
-        let imageUrl = try user.nestedContainer(keyedBy: ImageUrlKeys.self, forKey: .imageUrl)
-        let size = try imageUrl.decode(URL.self, forKey: .size)
-        self.init(body: body, name: name, username: username, size: size)
+        let id = try container.decode(Int.self, forKey: .id)
+        let username = try container.decode(String.self, forKey: .username)
+        let trips = try container.nestedContainer(keyedBy: TripKeys.self, forKey: .trips)
+        let tripName = try trips.decode(String.self, forKey: .tripName)
+        let date = try trips.decode(String.self, forKey: .date)
+        let waypoints = try trips.decode([String].self, forKey: .waypoints)
+        let completed = try trips.decode(Bool.self, forKey: .completed)
+        self.init(id: id, username: username, tripName: tripName, date: date, waypoints: waypoints, completed: completed)
     }
 }

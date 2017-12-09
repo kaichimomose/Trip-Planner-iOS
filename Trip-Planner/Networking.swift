@@ -10,9 +10,9 @@ import Foundation
 
 class Networking {
     let session = URLSession.shared
-    let baseURL = "https://api.producthunt.com/v1"
+    let baseURL = "https://trip-planner-km.herokuapp.com"
     
-    func fetch(resource: Resource, completion: @escaping ([Decodable]) -> ()) {
+    func fetch(resource: Resource, completion: @escaping (Decodable) -> ()) {
         let fullUrl = baseURL + resource.path()
         var item = NSURLQueryItem()
         
@@ -28,20 +28,20 @@ class Networking {
         
 //        let url = URL(string: pramUrl!)!
         var request = URLRequest(url: url!)
-        request.allHTTPHeaderFields = resource.header(token: "3c486e75957c3d8c0ee628b1cf0263782741826ad69cbf084e1d19317c1543cf")
+        request.allHTTPHeaderFields = resource.header()
         request.httpMethod = resource.httpMethod().rawValue
         
         session.dataTask(with: request) {(data, res, err) in
             if let data = data {
                 switch resource {
-                    case .posts:
-                        let postsList = try? JSONDecoder().decode(PostsList.self, from: data)
-                        guard let aPostsList = postsList?.posts else {return}
-                        completion(aPostsList)
-                    case .comments:
-                        let commentsList = try? JSONDecoder().decode(CommentsList.self, from: data)
-                        guard let aCommentsList = commentsList?.comments else {return}
-                        completion(aCommentsList)
+                    case .login, .signUp, .editProfile, .deleteAccount:
+                        let user = try? JSONDecoder().decode(User.self, from: data)
+                        guard let aUser = user else {return}
+                        completion(aUser)
+                    case .friendsTrip, .postTrip, .deleteTrip, .editTrip, .findFriend:
+                        let tripsList = try? JSONDecoder().decode(TripsList.self, from: data)
+                        guard let aTripsList = tripsList?.trips else {return}
+                        completion(aTripsList)
                     
                 }
             }

@@ -13,11 +13,17 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passWordTextField: UITextField!
     @IBOutlet weak var signInButton: UIButton!
+    @IBOutlet weak var warningLabel: UILabel!
+    
+    var user: User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.warningLabel.layer.cornerRadius = 3
+        self.warningLabel.layer.borderColor = UIColor.red.cgColor
+        self.warningLabel.layer.borderWidth = 1
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,11 +32,22 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func signInButtonTapped(_ sender: Any) {
-        let userName = userNameTextField.text
-        if let userName = userName {
-            
+        let username = userNameTextField.text
+        let passWord = passWordTextField.text
+        if let username = username, let passWord = passWord{
+            Networking().fetch(resource: .login(email: username, password: passWord)) { (result) in
+                DispatchQueue.main.async {
+                    guard let user = result as? User else {return}
+                    self.user = user
+                }
+            }
         } else {
-            
+            if username == nil {
+                userNameTextField.placeholder = "please fill out username/email"
+            }
+            if passWord == nil {
+                passWordTextField.placeholder = "please fill out password"
+            }
         }
     }
     

@@ -40,15 +40,13 @@ enum Resource {
         }
     }
     
-    func header(token: String) -> [String: String] {
+    func header() -> [String: String] {
         switch self {
         case let .login(email, password):
             let token = BasicAuth.generateBasicAuthHeader(username: email, password: password)
             
-            return ["Accept": "application/json",
-                    "Content-Type": "application/json",
-                    "Authorization": "\(token)",
-                    "Host": "trip-planner-km.herokuapp.com"
+            return ["Authorization": "\(token)",
+                    "Content-Type": "application/json"
             ]
         default:
             return [:]
@@ -66,17 +64,17 @@ enum Resource {
     
     func urlParameters() -> [String: String] {
         switch self {
-        default:
-            return [:]
         case .findFriend(let username):
             return ["username": username]
+        default:
+                return [:]
         }
     }
     
     func body() -> Data? {
-        switch self {
+//        switch self {
 //        case .posts, .comments:
-//            return nil
-        }
+            return nil
+//        }
     }
 }
