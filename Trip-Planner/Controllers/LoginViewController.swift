@@ -32,23 +32,30 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func signInButtonTapped(_ sender: Any) {
-        let username = userNameTextField.text
-        let passWord = passWordTextField.text
-        if let username = username, let passWord = passWord{
-            Networking().fetch(resource: .login(email: username, password: passWord)) { (result) in
-                DispatchQueue.main.async {
-                    guard let user = result as? User else {return}
-                    self.user = user
-                }
-            }
-        } else {
-            if username == nil {
-                userNameTextField.placeholder = "please fill out username/email"
-            }
-            if passWord == nil {
-                passWordTextField.placeholder = "please fill out password"
-            }
-        }
+//        let username = userNameTextField.text
+//        let passWord = passWordTextField.text
+//        if let username = username, let passWord = passWord{
+//            Networking().fetch(resource: .login(email: username, password: passWord)) { (result) in
+//                DispatchQueue.main.async {
+//                    guard let user = result as? User else {return}
+//                    self.user = user
+//                }
+//            }
+//        } else {
+//            if username == nil {
+//                userNameTextField.placeholder = "please fill out username/email"
+//            }
+//            if passWord == nil {
+//                passWordTextField.placeholder = "please fill out password"
+//            }
+//        }
+        
+        let initialViewController: UIViewController
+        let storyboard = UIStoryboard(name: "User", bundle: nil)
+        initialViewController = storyboard.instantiateInitialViewController()!
+        
+        self.view.window?.rootViewController = initialViewController
+        self.view.window?.makeKeyAndVisible()
     }
     
     /*

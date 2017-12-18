@@ -8,38 +8,44 @@
 
 /* Begin PBXBuildFile section */
 		BF9B20CA1FD8BEE200776A67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9B20C91FD8BEE200776A67 /* AppDelegate.swift */; };
-		BF9B20CF1FD8BEE200776A67 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF9B20CD1FD8BEE200776A67 /* Login.storyboard */; };
 		BF9B20D11FD8BEE200776A67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF9B20D01FD8BEE200776A67 /* Assets.xcassets */; };
 		BF9B20D41FD8BEE200776A67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF9B20D21FD8BEE200776A67 /* LaunchScreen.storyboard */; };
-		BF9B20DC1FD8D37800776A67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF9B20DB1FD8D37800776A67 /* Main.storyboard */; };
-		BF9B20DE1FD8D52300776A67 /* Mytrip.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF9B20DD1FD8D52300776A67 /* Mytrip.storyboard */; };
-		BF9B20E01FD8D53800776A67 /* Friends.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF9B20DF1FD8D53800776A67 /* Friends.storyboard */; };
-		BF9B20E21FD8D65500776A67 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9B20E11FD8D65500776A67 /* LoginViewController.swift */; };
-		BF9B20E41FD8D6C100776A67 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9B20E31FD8D6C100776A67 /* SignUpViewController.swift */; };
-		BF9B20E91FD8D90500776A67 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9B20E51FD8D90500776A67 /* Enums.swift */; };
-		BF9B20EA1FD8D90500776A67 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9B20E61FD8D90500776A67 /* User.swift */; };
-		BF9B20EB1FD8D90500776A67 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9B20E71FD8D90500776A67 /* Networking.swift */; };
-		BF9B20EC1FD8D90500776A67 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9B20E81FD8D90500776A67 /* Comment.swift */; };
-		BF9B20EE1FD8FFD600776A67 /* BasicAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9B20ED1FD8FFD600776A67 /* BasicAuth.swift */; };
+		BFE917C71FE64660006F6A83 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE917BA1FE64660006F6A83 /* LoginViewController.swift */; };
+		BFE917C81FE64660006F6A83 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE917BB1FE64660006F6A83 /* SignUpViewController.swift */; };
+		BFE917CC1FE64660006F6A83 /* BasicAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE917C21FE64660006F6A83 /* BasicAuth.swift */; };
+		BFE917CD1FE64660006F6A83 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE917C31FE64660006F6A83 /* Comment.swift */; };
+		BFE917CE1FE64660006F6A83 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE917C41FE64660006F6A83 /* Enums.swift */; };
+		BFE917CF1FE64660006F6A83 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE917C51FE64660006F6A83 /* Networking.swift */; };
+		BFE917D01FE64660006F6A83 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE917C61FE64660006F6A83 /* User.swift */; };
+		BFE917D41FE6474E006F6A83 /* TripTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE917D31FE6474E006F6A83 /* TripTableViewCell.swift */; };
+		BFE917D61FE647B0006F6A83 /* UserHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE917D51FE647B0006F6A83 /* UserHeaderTableViewCell.swift */; };
+		BFE917D81FE647E4006F6A83 /* UserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE917D71FE647E4006F6A83 /* UserTableViewController.swift */; };
+		BFE917DD1FE6505E006F6A83 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFE917D91FE6505E006F6A83 /* Login.storyboard */; };
+		BFE917DE1FE6505E006F6A83 /* Friends.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFE917DA1FE6505E006F6A83 /* Friends.storyboard */; };
+		BFE917DF1FE6505E006F6A83 /* Mytrip.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFE917DB1FE6505E006F6A83 /* Mytrip.storyboard */; };
+		BFE917E01FE6505E006F6A83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFE917DC1FE6505E006F6A83 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BF9B20C61FD8BEE200776A67 /* Trip-Planner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trip-Planner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF9B20C91FD8BEE200776A67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BF9B20CE1FD8BEE200776A67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		BF9B20D01FD8BEE200776A67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF9B20D31FD8BEE200776A67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF9B20D51FD8BEE200776A67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BF9B20DB1FD8D37800776A67 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		BF9B20DD1FD8D52300776A67 /* Mytrip.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Mytrip.storyboard; sourceTree = "<group>"; };
-		BF9B20DF1FD8D53800776A67 /* Friends.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Friends.storyboard; sourceTree = "<group>"; };
-		BF9B20E11FD8D65500776A67 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		BF9B20E31FD8D6C100776A67 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		BF9B20E51FD8D90500776A67 /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
-		BF9B20E61FD8D90500776A67 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		BF9B20E71FD8D90500776A67 /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
-		BF9B20E81FD8D90500776A67 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
-		BF9B20ED1FD8FFD600776A67 /* BasicAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicAuth.swift; sourceTree = "<group>"; };
+		BFE917BA1FE64660006F6A83 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BFE917BB1FE64660006F6A83 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		BFE917C21FE64660006F6A83 /* BasicAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicAuth.swift; sourceTree = "<group>"; };
+		BFE917C31FE64660006F6A83 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		BFE917C41FE64660006F6A83 /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		BFE917C51FE64660006F6A83 /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		BFE917C61FE64660006F6A83 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		BFE917D31FE6474E006F6A83 /* TripTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTableViewCell.swift; sourceTree = "<group>"; };
+		BFE917D51FE647B0006F6A83 /* UserHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		BFE917D71FE647E4006F6A83 /* UserTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewController.swift; sourceTree = "<group>"; };
+		BFE917D91FE6505E006F6A83 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		BFE917DA1FE6505E006F6A83 /* Friends.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Friends.storyboard; sourceTree = "<group>"; };
+		BFE917DB1FE6505E006F6A83 /* Mytrip.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Mytrip.storyboard; sourceTree = "<group>"; };
+		BFE917DC1FE6505E006F6A83 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,23 +78,58 @@
 		BF9B20C81FD8BEE200776A67 /* Trip-Planner */ = {
 			isa = PBXGroup;
 			children = (
-				BF9B20ED1FD8FFD600776A67 /* BasicAuth.swift */,
-				BF9B20E51FD8D90500776A67 /* Enums.swift */,
-				BF9B20E71FD8D90500776A67 /* Networking.swift */,
-				BF9B20E61FD8D90500776A67 /* User.swift */,
-				BF9B20E81FD8D90500776A67 /* Comment.swift */,
 				BF9B20C91FD8BEE200776A67 /* AppDelegate.swift */,
-				BF9B20E11FD8D65500776A67 /* LoginViewController.swift */,
-				BF9B20E31FD8D6C100776A67 /* SignUpViewController.swift */,
-				BF9B20CD1FD8BEE200776A67 /* Login.storyboard */,
-				BF9B20DB1FD8D37800776A67 /* Main.storyboard */,
-				BF9B20DF1FD8D53800776A67 /* Friends.storyboard */,
-				BF9B20DD1FD8D52300776A67 /* Mytrip.storyboard */,
+				BFE917B91FE64660006F6A83 /* Controllers */,
+				BFE917C11FE64660006F6A83 /* Network */,
+				BFE917C01FE64660006F6A83 /* Views */,
+				BFE917BC1FE64660006F6A83 /* Storyboards */,
 				BF9B20D01FD8BEE200776A67 /* Assets.xcassets */,
 				BF9B20D21FD8BEE200776A67 /* LaunchScreen.storyboard */,
 				BF9B20D51FD8BEE200776A67 /* Info.plist */,
 			);
 			path = "Trip-Planner";
+			sourceTree = "<group>";
+		};
+		BFE917B91FE64660006F6A83 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BFE917BA1FE64660006F6A83 /* LoginViewController.swift */,
+				BFE917BB1FE64660006F6A83 /* SignUpViewController.swift */,
+				BFE917D71FE647E4006F6A83 /* UserTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BFE917BC1FE64660006F6A83 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				BFE917DA1FE6505E006F6A83 /* Friends.storyboard */,
+				BFE917D91FE6505E006F6A83 /* Login.storyboard */,
+				BFE917DC1FE6505E006F6A83 /* Main.storyboard */,
+				BFE917DB1FE6505E006F6A83 /* Mytrip.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		BFE917C01FE64660006F6A83 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BFE917D31FE6474E006F6A83 /* TripTableViewCell.swift */,
+				BFE917D51FE647B0006F6A83 /* UserHeaderTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BFE917C11FE64660006F6A83 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				BFE917C21FE64660006F6A83 /* BasicAuth.swift */,
+				BFE917C31FE64660006F6A83 /* Comment.swift */,
+				BFE917C41FE64660006F6A83 /* Enums.swift */,
+				BFE917C51FE64660006F6A83 /* Networking.swift */,
+				BFE917C61FE64660006F6A83 /* User.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,12 +191,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF9B20E01FD8D53800776A67 /* Friends.storyboard in Resources */,
+				BFE917DE1FE6505E006F6A83 /* Friends.storyboard in Resources */,
+				BFE917DF1FE6505E006F6A83 /* Mytrip.storyboard in Resources */,
 				BF9B20D41FD8BEE200776A67 /* LaunchScreen.storyboard in Resources */,
-				BF9B20DE1FD8D52300776A67 /* Mytrip.storyboard in Resources */,
+				BFE917E01FE6505E006F6A83 /* Main.storyboard in Resources */,
 				BF9B20D11FD8BEE200776A67 /* Assets.xcassets in Resources */,
-				BF9B20CF1FD8BEE200776A67 /* Login.storyboard in Resources */,
-				BF9B20DC1FD8D37800776A67 /* Main.storyboard in Resources */,
+				BFE917DD1FE6505E006F6A83 /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,28 +207,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF9B20E41FD8D6C100776A67 /* SignUpViewController.swift in Sources */,
-				BF9B20E21FD8D65500776A67 /* LoginViewController.swift in Sources */,
-				BF9B20E91FD8D90500776A67 /* Enums.swift in Sources */,
-				BF9B20EC1FD8D90500776A67 /* Comment.swift in Sources */,
-				BF9B20EB1FD8D90500776A67 /* Networking.swift in Sources */,
+				BFE917CD1FE64660006F6A83 /* Comment.swift in Sources */,
+				BFE917C81FE64660006F6A83 /* SignUpViewController.swift in Sources */,
+				BFE917C71FE64660006F6A83 /* LoginViewController.swift in Sources */,
+				BFE917D41FE6474E006F6A83 /* TripTableViewCell.swift in Sources */,
+				BFE917CC1FE64660006F6A83 /* BasicAuth.swift in Sources */,
+				BFE917D01FE64660006F6A83 /* User.swift in Sources */,
+				BFE917CE1FE64660006F6A83 /* Enums.swift in Sources */,
+				BFE917D61FE647B0006F6A83 /* UserHeaderTableViewCell.swift in Sources */,
+				BFE917D81FE647E4006F6A83 /* UserTableViewController.swift in Sources */,
 				BF9B20CA1FD8BEE200776A67 /* AppDelegate.swift in Sources */,
-				BF9B20EE1FD8FFD600776A67 /* BasicAuth.swift in Sources */,
-				BF9B20EA1FD8D90500776A67 /* User.swift in Sources */,
+				BFE917CF1FE64660006F6A83 /* Networking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		BF9B20CD1FD8BEE200776A67 /* Login.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BF9B20CE1FD8BEE200776A67 /* Base */,
-			);
-			name = Login.storyboard;
-			sourceTree = "<group>";
-		};
 		BF9B20D21FD8BEE200776A67 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

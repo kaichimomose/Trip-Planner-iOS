@@ -11,9 +11,10 @@
         <!--Tab Bar Controller-->
         <scene sceneID="YSs-6w-l36">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="BmE-Ll-rIY" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="Main" automaticallyAdjustsScrollViewInsets="NO" id="BmE-Ll-rIY" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dgu-Cj-soM">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
@@ -34,7 +35,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RNh-E4-LQf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="850.39999999999998" y="158.77061469265368"/>
+            <point key="canvasLocation" x="840" y="13"/>
         </scene>
         <!--Friends-->
         <scene sceneID="qub-k2-m4v">
@@ -44,7 +45,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tk2-zv-8BR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="850" y="958"/>
+            <point key="canvasLocation" x="845" y="343"/>
         </scene>
     </scenes>
 </document>
