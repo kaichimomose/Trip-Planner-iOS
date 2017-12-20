@@ -1,21 +1,18 @@
 //
-//  UserTableViewController.swift
+//  TripViewController.swift
 //  Trip-Planner
 //
-//  Created by Kaichi Momose on 2017/12/16.
+//  Created by Kaichi Momose on 2017/12/20.
 //  Copyright © 2017 Kaichi Momose. All rights reserved.
 //
 
 import UIKit
 
-class UserTableViewController: UIViewController {
-    
-    @IBOutlet weak var tableView: UITableView!
-    
+class TripTableViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.rowHeight = UITableViewAutomaticDimension
-        self.tableView.estimatedRowHeight = 70
+
         // Do any additional setup after loading the view.
     }
 
@@ -24,8 +21,7 @@ class UserTableViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func unwindToUserTableViewController(_ segue: UIStoryboardSegue) {
-    }
+
     /*
     // MARK: - Navigation
 
@@ -38,24 +34,23 @@ class UserTableViewController: UIViewController {
 
 }
 
-extension UserTableViewController: UITableViewDataSource, UITableViewDelegate {
+extension TripTableViewController: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     //Header function
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "UserHeader") as! UserHeaderTableViewCell
-        cell.userImage.layer.masksToBounds = true
-        cell.userImage.layer.cornerRadius = cell.userImage.frame.width/2
-        cell.userImage.layer.borderWidth = 2
-        cell.userImage.layer.borderColor = UIColor.lightGray.cgColor
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TripHeader") as! TripHeaderTableViewCell
+        cell.checkLabel.layer.cornerRadius = 5
+        cell.checkLabel.layer.borderWidth = 2
+        cell.checkLabel.layer.borderColor = UIColor.darkGray.cgColor
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         // sets height of header cells
-        return 100
+        return 70
     }
     //
     
@@ -65,14 +60,9 @@ extension UserTableViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TripCell", for: indexPath) as! TripTableViewCell
-//        let row = indexPath.row
-        cell.tripImage.layer.masksToBounds = true
-        cell.tripImage.layer.cornerRadius = 2
-        cell.tripImage.layer.borderColor = UIColor.darkGray.cgColor
-        cell.tripImage.layer.borderWidth = 1
+        let cell = tableView.dequeueReusableCell(withIdentifier: "WaypointCell", for: indexPath) as! WaypointTableViewCell
+        //        let row = indexPath.row
+        cell.backgroundColor = UIColor.darkGray
         return cell
     }
-    
-    
 }
