@@ -10,9 +10,20 @@ import UIKit
 
 class TripHeaderTableViewCell: UITableViewCell {
 
+    var completed: Bool = false
+    
     @IBOutlet weak var tripNameTextField: UITextField!
     @IBOutlet weak var tripDateLabel: UILabel!
-    @IBOutlet weak var checkLabel: UILabel!
+    @IBOutlet weak var checkButton: UIButton!
     
-
+    @IBAction func checkButtonTapped(_ sender: Any) {
+        if completed {
+            completed = false
+            checkButton.setTitle("", for: .normal)
+        } else {
+            completed = true
+            checkButton.setTitle("✔️", for: .normal)
+        }
+    }
+    
 }
