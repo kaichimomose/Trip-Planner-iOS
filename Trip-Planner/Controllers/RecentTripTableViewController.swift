@@ -23,13 +23,14 @@ class RecentTripTableViewController: UIViewController {
 
 }
 
-extension FriendTableViewController: UITableViewDataSource {
+extension RecentTripTableViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "friend") as! RecentTripTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "recenttrip") as! RecentTripTableViewCell
+        cell.backgroundColor = .red
         return cell
     }
     
