@@ -30,6 +30,7 @@ class Networking {
         var request = URLRequest(url: url!)
         request.allHTTPHeaderFields = resource.header()
         request.httpMethod = resource.httpMethod().rawValue
+        request.httpBody = resource.body()
         
         session.dataTask(with: request) {(data, res, err) in
             if let data = data {

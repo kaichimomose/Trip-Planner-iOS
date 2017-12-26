@@ -10,6 +10,8 @@ import UIKit
 
 class UserTableViewController: UIViewController {
     
+    var user: User?
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -46,6 +48,15 @@ extension UserTableViewController: UITableViewDataSource, UITableViewDelegate {
     //Header function
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UserHeader") as! UserHeaderTableViewCell
+        user = user ?? User.current
+        if let user = user {
+            cell.usernameLabel.text = user.username
+            cell.numberOfTripsLabel.text = String(user.tripsCount)
+        } else {
+            cell.usernameLabel.text = "No username"
+            cell.numberOfTripsLabel.text = String(0)
+        }
+        
         cell.userImage.layer.masksToBounds = true
         cell.userImage.layer.cornerRadius = cell.userImage.frame.width/2
         cell.userImage.layer.borderWidth = 2

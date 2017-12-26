@@ -16,7 +16,7 @@ enum HttpMethod: String {
 }
 
 enum Resource {
-    case signUp
+    case signUp(email: String, password: String)
     case login(email: String, password: String)
     case editProfile
     case deleteAccount
@@ -49,7 +49,7 @@ enum Resource {
                     "Content-Type": "application/json"
             ]
         default:
-            return [:]
+            return ["Content-Type": "application/json"]
         }
     }
     
@@ -72,9 +72,13 @@ enum Resource {
     }
     
     func body() -> Data? {
-//        switch self {
-//        case .posts, .comments:
+        switch self {
+        case let .signUp(email, password)://, .postTrip
+            let json = ["username": email, "password": password, "name": "","trip_count": 0, "id": 0] as [String: Any]
+            let data = try? JSONSerialization.data(withJSONObject: json, options: [])
+            return data
+        default:
             return nil
-//        }
+        }
     }
 }

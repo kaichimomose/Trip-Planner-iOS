@@ -145,10 +145,10 @@
 			isa = PBXGroup;
 			children = (
 				BFE917C21FE64660006F6A83 /* BasicAuth.swift */,
-				BFE917C31FE64660006F6A83 /* Comment.swift */,
 				BFE917C41FE64660006F6A83 /* Enums.swift */,
 				BFE917C51FE64660006F6A83 /* Networking.swift */,
 				BFE917C61FE64660006F6A83 /* User.swift */,
+				BFE917C31FE64660006F6A83 /* Comment.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
