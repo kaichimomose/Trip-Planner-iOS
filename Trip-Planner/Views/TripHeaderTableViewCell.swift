@@ -9,7 +9,7 @@
 import UIKit
 
 class TripHeaderTableViewCell: UITableViewCell {
-
+    
     var completed: Bool = false
     
     @IBOutlet weak var tripNameTextField: UITextField!

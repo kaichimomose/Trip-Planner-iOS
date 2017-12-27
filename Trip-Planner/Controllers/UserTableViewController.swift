@@ -11,6 +11,7 @@ import UIKit
 class UserTableViewController: UIViewController {
     
     var user: User?
+    var trips = [Trip]()
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -18,7 +19,21 @@ class UserTableViewController: UIViewController {
         super.viewDidLoad()
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 70
-        // Do any additional setup after loading the view.
+        user = user ?? User.current
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        Networking().fetch(resource: .myTrip(id: (user?.id)!)) { (result) in
+            DispatchQueue.main.async {
+                guard let trips = result as? [Trip] else {return}
+                
+                self.trips = trips
+
+                self.tableView.reloadData()
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,16 +43,13 @@ class UserTableViewController: UIViewController {
     
     @IBAction func unwindToUserTableViewController(_ segue: UIStoryboardSegue) {
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "trip" {
+            let tripTVC = segue.destination as! TripTableViewController
+            tripTVC.id = user?.id
+        }
     }
-    */
-
 }
 
 extension UserTableViewController: UITableViewDataSource, UITableViewDelegate {
@@ -48,10 +60,10 @@ extension UserTableViewController: UITableViewDataSource, UITableViewDelegate {
     //Header function
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UserHeader") as! UserHeaderTableViewCell
-        user = user ?? User.current
+
         if let user = user {
             cell.usernameLabel.text = user.username
-            cell.numberOfTripsLabel.text = String(user.tripsCount)
+            cell.numberOfTripsLabel.text = String(describing: self.trips.count)
         } else {
             cell.usernameLabel.text = "No username"
             cell.numberOfTripsLabel.text = String(0)
@@ -72,17 +84,30 @@ extension UserTableViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // returns the number of table view rows
-        return 2
+        return trips.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TripCell", for: indexPath) as! TripTableViewCell
-//        let row = indexPath.row
+        let row = indexPath.row
         cell.tripImage.layer.masksToBounds = true
         cell.tripImage.layer.cornerRadius = 2
         cell.tripImage.layer.borderColor = UIColor.darkGray.cgColor
         cell.tripImage.layer.borderWidth = 1
+        
+        cell.trip = self.trips[row]
+        
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let row = indexPath.row
+        
+        let tripTVC = storyboard?.instantiateViewController(withIdentifier: "TripTableViewController") as! TripTableViewController
+        
+        tripTVC.trip = self.trips[row]
+        
+        self.navigationController?.pushViewController(tripTVC, animated: true)
     }
     
     

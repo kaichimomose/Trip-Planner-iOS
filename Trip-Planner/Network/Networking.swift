@@ -18,7 +18,7 @@ class Networking {
         
         let components = NSURLComponents(string: fullUrl)
         for (key, value) in resource.urlParameters() {
-            item = NSURLQueryItem(name: key, value: value)
+            item = NSURLQueryItem(name: key, value: value )
         }
         
         components?.queryItems = [item as URLQueryItem]
@@ -34,16 +34,19 @@ class Networking {
         
         session.dataTask(with: request) {(data, res, err) in
             if let data = data {
+                let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
+                if let responseJSON = responseJSON as? [[String: Any]] {
+                    print(responseJSON)
+                }
                 switch resource {
                     case .login, .signUp, .editProfile, .deleteAccount:
                         let user = try? JSONDecoder().decode(User.self, from: data)
                         guard let aUser = user else {return}
                         completion(aUser)
-                    case .friendsTrip, .postTrip, .deleteTrip, .editTrip, .findFriend:
-                        let tripsList = try? JSONDecoder().decode(TripsList.self, from: data)
-                        guard let aTripsList = tripsList?.trips else {return}
+                    case .myTrip, .friendsTrip, .postTrip, .deleteTrip, .editTrip, .findFriend:
+                        let tripsList = try? JSONDecoder().decode([Trip].self, from: data)
+                        guard let aTripsList = tripsList else {return}
                         completion(aTripsList)
-                    
                 }
             }
         }.resume()

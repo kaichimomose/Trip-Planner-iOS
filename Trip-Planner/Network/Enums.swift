@@ -21,7 +21,8 @@ enum Resource {
     case editProfile
     case deleteAccount
     
-    case postTrip
+    case myTrip(id: Int)
+    case postTrip(id: Int, tripName: String, completed: Bool)
     case editTrip
     case deleteTrip
     case friendsTrip
@@ -29,7 +30,7 @@ enum Resource {
     
     func httpMethod() -> HttpMethod {
         switch self {
-        case .login, .friendsTrip, .findFriend:
+        case .login, .myTrip, .friendsTrip, .findFriend:
             return .get
         case .signUp, .postTrip:
             return .post
@@ -57,7 +58,7 @@ enum Resource {
         switch self {
         case .login, .signUp, .editProfile, .deleteAccount:
             return "/users"
-        case .friendsTrip, .postTrip, .deleteTrip, .editTrip, .findFriend:
+        case .myTrip, .friendsTrip, .postTrip, .deleteTrip, .editTrip, .findFriend:
             return "/trip"
         }
     }
@@ -66,15 +67,21 @@ enum Resource {
         switch self {
         case .findFriend(let username):
             return ["username": username]
+        case .myTrip(let id):
+            return ["id": String(id)]
         default:
-                return [:]
+            return [:]
         }
     }
     
     func body() -> Data? {
         switch self {
-        case let .signUp(email, password)://, .postTrip
-            let json = ["username": email, "password": password, "name": "","trip_count": 0, "id": 0] as [String: Any]
+        case let .signUp(email, password):
+            let json = ["username": email, "password": password, "name": "", "trips_count": 0, "id": 0] as [String: Any]
+            let data = try? JSONSerialization.data(withJSONObject: json, options: [])
+            return data
+        case let .postTrip(id, tripName, completed):
+            let json = ["id": id, "trip_name": tripName, "completed": completed] as [String: Any]
             let data = try? JSONSerialization.data(withJSONObject: json, options: [])
             return data
         default:

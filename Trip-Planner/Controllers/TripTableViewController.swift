@@ -10,15 +10,21 @@ import UIKit
 
 class TripTableViewController: UIViewController {
     
+    var id: Int?
     var numberOfCells: Int?
+    var tripName: String = ""
+    var completed: Bool = false
+    var trip: Trip?
     
     @IBOutlet weak var addWaypointButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        if let trip = trip {
+            self.numberOfCells = trip.waypoints.count
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,15 +43,17 @@ class TripTableViewController: UIViewController {
         self.tableView.reloadData()
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "save" {
+            self.tableView.reloadData()
+            Networking().fetch(resource: .postTrip(id: id!, tripName: self.tripName, completed: self.completed)) { (result) in
+                DispatchQueue.main.async {
+                    
+                }
+            }
+        }
     }
-    */
+    
 
 }
 
@@ -57,9 +65,19 @@ extension TripTableViewController: UITableViewDataSource, UITableViewDelegate {
     //Header function
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TripHeader") as! TripHeaderTableViewCell
+        
+        if let trip = trip {
+            cell.tripNameTextField.text = trip.tripName
+            cell.completed = trip.completed
+        }
+        
         cell.checkButton.layer.cornerRadius = 10
         cell.checkButton.layer.borderWidth = 2
         cell.checkButton.layer.borderColor = UIColor.darkGray.cgColor
+        
+        self.tripName = cell.tripNameTextField.text ?? ""
+        self.completed = cell.completed
+        
         return cell
     }
     
@@ -77,7 +95,14 @@ extension TripTableViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "WaypointCell", for: indexPath) as! WaypointTableViewCell
-        //        let row = indexPath.row
+        let row = indexPath.row
+        
+        if let trip = trip {
+            if row < trip.waypoints.count {
+                cell.waypointTextField.text = trip.waypoints[row]
+            }
+        }
+        
         cell.backgroundColor = UIColor.darkGray
         return cell
     }

@@ -60,10 +60,10 @@ extension User: Decodable {
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: Keys.self)
-        let id = 0 //try container.decode(Int.self, forKey: .id)
-        let name = ""//try container.decode(String.self, forKey: .name)
+        let id = try container.decode(Int.self, forKey: .id)
+        let name = try container.decode(String.self, forKey: .name)
         let username = try container.decode(String.self, forKey: .username)
-        let tripsCount = 0 //try container.decode(Int.self, forKey: .tripsCount)
+        let tripsCount = try container.decode(Int.self, forKey: .tripsCount)
 //        let imageUrl = try container.decode(URL.self, forKey: .thumbnail)
         self.init(id: id, name: name, username: username, tripsCount: tripsCount)//, imageUrl: imageUrl
     }

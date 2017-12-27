@@ -15,4 +15,10 @@ class TripTableViewCell: UITableViewCell {
     @IBOutlet weak var tripDateLabel: UILabel!
     @IBOutlet weak var checkLabel: UILabel!
     
+    var trip: Trip? {
+        didSet {
+            tripNameLabel.text = trip?.tripName
+            
+        }
+    }
 }

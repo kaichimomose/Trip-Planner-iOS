@@ -10,5 +10,6 @@ import UIKit
 
 class WaypointTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var waypointTextField: UITextField!
     
 }

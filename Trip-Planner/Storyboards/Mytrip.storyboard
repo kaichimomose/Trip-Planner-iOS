@@ -182,12 +182,13 @@
                     <navigationItem key="navigationItem" title="My Trips" id="gCx-OK-tUd">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Ykz-V6-BXm">
                             <connections>
-                                <segue destination="okE-fw-9Ag" kind="show" id="p8C-TO-yIv"/>
+                                <segue destination="okE-fw-9Ag" kind="show" identifier="trip" id="p8C-TO-yIv"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="cSG-JD-0ZX" id="Lm0-cA-azo"/>
+                        <segue destination="okE-fw-9Ag" kind="show" id="fxf-y9-i4K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Umy-P1-v3E" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -288,7 +289,7 @@
         <!--Title-->
         <scene sceneID="NdX-9y-bg5">
             <objects>
-                <viewController id="okE-fw-9Ag" customClass="TripTableViewController" customModule="Trip_Planner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TripTableViewController" id="okE-fw-9Ag" customClass="TripTableViewController" customModule="Trip_Planner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZoL-ef-wXZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -380,6 +381,9 @@
                                                 <constraint firstItem="okx-d6-NrF" firstAttribute="centerX" secondItem="iM9-Pi-3tg" secondAttribute="centerX" id="QuT-Q0-NPO"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="waypointTextField" destination="0et-vk-ZG2" id="Uhh-jH-rle"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -413,10 +417,14 @@
                     <navigationItem key="navigationItem" title="Title" id="njp-KA-9zU">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Vlz-eb-idD">
                             <connections>
-                                <segue destination="jCf-m1-lZw" kind="unwind" unwindAction="unwindToUserTableViewController:" id="ztg-fo-eT9"/>
+                                <segue destination="jCf-m1-lZw" kind="unwind" identifier="cancel" unwindAction="unwindToUserTableViewController:" id="ztg-fo-eT9"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="ByF-Dg-mew"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="ByF-Dg-mew">
+                            <connections>
+                                <segue destination="jCf-m1-lZw" kind="unwind" identifier="save" unwindAction="unwindToUserTableViewController:" id="n14-Z1-3R9"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="addWaypointButton" destination="tQI-Yh-Q05" id="5R4-h1-Yfd"/>
@@ -448,4 +456,7 @@
             <point key="canvasLocation" x="414" y="159"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="fxf-y9-i4K"/>
+    </inferredMetricsTieBreakers>
 </document>
