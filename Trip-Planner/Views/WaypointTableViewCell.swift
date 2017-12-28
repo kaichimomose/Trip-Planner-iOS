@@ -12,4 +12,10 @@ class WaypointTableViewCell: UITableViewCell {
 
     @IBOutlet weak var waypointTextField: UITextField!
     
+//    func returnTextOfWaypointTextField() -> String
+//    {
+//        print(waypointTextField.text ?? "")
+//        return waypointTextField.text!
+//    }
+    
 }

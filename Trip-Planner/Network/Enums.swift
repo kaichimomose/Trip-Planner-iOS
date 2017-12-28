@@ -11,7 +11,7 @@ import Foundation
 enum HttpMethod: String {
     case get = "GET"
     case post = "POST"
-    case put = "PUT"
+    case patch = "PATCH"
     case delete = "DELETE"
 }
 
@@ -22,9 +22,9 @@ enum Resource {
     case deleteAccount
     
     case myTrip(id: Int)
-    case postTrip(id: Int, tripName: String, completed: Bool)
-    case editTrip
-    case deleteTrip
+    case postTrip(id: Int, tripName: String, completed: Bool, waypoints: [String])
+    case editTrip(id: Int, oldTrip: String, newTrip: String, completed: Bool, waypoints: [String])
+    case deleteTrip(id: Int, tripName: String)
     case friendsTrip
     case findFriend(username: String)
     
@@ -35,7 +35,7 @@ enum Resource {
         case .signUp, .postTrip:
             return .post
         case .editTrip, .editProfile:
-            return .put
+            return .patch
         case .deleteTrip, .deleteAccount:
             return .delete
         }
@@ -80,8 +80,16 @@ enum Resource {
             let json = ["username": email, "password": password, "name": "", "trips_count": 0, "id": 0] as [String: Any]
             let data = try? JSONSerialization.data(withJSONObject: json, options: [])
             return data
-        case let .postTrip(id, tripName, completed):
-            let json = ["id": id, "trip_name": tripName, "completed": completed] as [String: Any]
+        case let .postTrip(id, tripName, completed, waypoints):
+            let json = ["id": id, "trip_name": tripName, "completed": completed, "waypoints": waypoints] as [String: Any]
+            let data = try? JSONSerialization.data(withJSONObject: json, options: [])
+            return data
+        case let .editTrip(id, oldTrip, newTrip, completed, waypoints):
+            let json = ["id": id, "old_trip": oldTrip, "new_trip": newTrip, "completed": completed, "waypoints": waypoints] as [String: Any]
+            let data = try? JSONSerialization.data(withJSONObject: json, options: [])
+            return data
+        case let .deleteTrip(id, tripName):
+            let json = ["id": id, "trip_name": tripName] as [String: Any]
             let data = try? JSONSerialization.data(withJSONObject: json, options: [])
             return data
         default:

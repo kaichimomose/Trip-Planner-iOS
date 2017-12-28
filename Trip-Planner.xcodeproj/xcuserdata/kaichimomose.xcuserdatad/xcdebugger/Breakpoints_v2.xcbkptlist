@@ -57,40 +57,8 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Trip-Planner/Network/Enums.swift"
-            timestampString = "536054448.776112"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
-            landmarkName = "body()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Trip-Planner/Network/Enums.swift"
-            timestampString = "536054448.776222"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
-            landmarkName = "body()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Trip-Planner/Network/User.swift"
-            timestampString = "536054448.776337"
+            timestampString = "536161116.839737"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "62"
@@ -122,7 +90,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Trip-Planner/Controllers/UserTableViewController.swift"
-            timestampString = "536054448.776576"
+            timestampString = "536161116.839969"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "28"
@@ -138,7 +106,7 @@
                   moduleName = "Trip-Planner"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/kaichimomose/Desktop/Trip-Planner/Trip-Planner/Controllers/UserTableViewController.swift"
-                  timestampString = "536053060.267273"
+                  timestampString = "536160188.618493"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "28"
@@ -153,7 +121,7 @@
                   moduleName = "Trip-Planner"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/kaichimomose/Desktop/Trip-Planner/Trip-Planner/Controllers/UserTableViewController.swift"
-                  timestampString = "536053060.271369"
+                  timestampString = "536160188.621046"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "29"
@@ -168,7 +136,7 @@
                   moduleName = "Trip-Planner"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/kaichimomose/Desktop/Trip-Planner/Trip-Planner/Controllers/UserTableViewController.swift"
-                  timestampString = "536053060.27498"
+                  timestampString = "536160188.623952"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "28"
@@ -185,7 +153,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Trip-Planner/Controllers/UserTableViewController.swift"
-            timestampString = "536054448.776689"
+            timestampString = "536161116.84007"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "30"
@@ -233,11 +201,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Trip-Planner/Network/Comment.swift"
-            timestampString = "536054448.776977"
+            timestampString = "536161116.840288"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
             landmarkName = "init(from:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -248,12 +216,106 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Trip-Planner/Controllers/TripTableViewController.swift"
-            timestampString = "536054448.777051"
+            filePath = "Trip-Planner/Controllers/UserTableViewController.swift"
+            timestampString = "536161116.840372"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
+            landmarkName = "tableView(_:commit:forRowAt:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Trip_Planner.UserTableViewController.tableView(__ObjC.UITableView, commit: __C.UITableViewCellEditingStyle, forRowAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "Trip-Planner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kaichimomose/Desktop/Trip-Planner/Trip-Planner/Controllers/UserTableViewController.swift"
+                  timestampString = "536160188.65465"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "117"
+                  endingLineNumber = "117"
+                  offsetFromSymbolStart = "203">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Trip_Planner.UserTableViewController.tableView(__ObjC.UITableView, commit: __C.UITableViewCellEditingStyle, forRowAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "Trip-Planner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kaichimomose/Desktop/Trip-Planner/Trip-Planner/Controllers/UserTableViewController.swift"
+                  timestampString = "536160188.657003"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "117"
+                  endingLineNumber = "117"
+                  offsetFromSymbolStart = "1021">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Decodable) -&gt; () in Trip_Planner.UserTableViewController.tableView(__ObjC.UITableView, commit: __C.UITableViewCellEditingStyle, forRowAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "Trip-Planner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kaichimomose/Desktop/Trip-Planner/Trip-Planner/Controllers/UserTableViewController.swift"
+                  timestampString = "536160188.659399"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "118"
+                  endingLineNumber = "118"
+                  offsetFromSymbolStart = "21">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 (Swift.Decodable) -&gt; () in Trip_Planner.UserTableViewController.tableView(__ObjC.UITableView, commit: __C.UITableViewCellEditingStyle, forRowAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "Trip-Planner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kaichimomose/Desktop/Trip-Planner/Trip-Planner/Controllers/UserTableViewController.swift"
+                  timestampString = "536160188.662013"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "117"
+                  endingLineNumber = "117"
+                  offsetFromSymbolStart = "17">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Trip-Planner/Network/Enums.swift"
+            timestampString = "536161116.840452"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "body()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Trip-Planner/Controllers/TripTableViewController.swift"
+            timestampString = "536161116.840523"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
             landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
          </BreakpointContent>

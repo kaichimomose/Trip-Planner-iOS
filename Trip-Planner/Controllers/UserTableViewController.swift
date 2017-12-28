@@ -110,5 +110,19 @@ extension UserTableViewController: UITableViewDataSource, UITableViewDelegate {
         self.navigationController?.pushViewController(tripTVC, animated: true)
     }
     
-    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        let row = indexPath.row
+        
+        if editingStyle == .delete {
+            Networking().fetch(resource: .deleteTrip(id: (user?.id)!, tripName: self.trips[row].tripName)) { (result) in
+                DispatchQueue.main.async {
+                    guard let trips = result as? [Trip] else {return}
+                    
+                    self.trips = trips
+                    
+                    self.tableView.reloadData()
+                }
+            }
+        }
+    }
 }

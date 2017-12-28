@@ -9,11 +9,10 @@
 import UIKit
 
 class UserHeaderTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var numberOfTripsLabel: UILabel!
     @IBOutlet weak var numberOfFriendsLabel: UILabel!
     
-
 }

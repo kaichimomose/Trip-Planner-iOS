@@ -15,6 +15,7 @@ struct Trip {
 //    let waypoints: [String]
     let completed: Bool
     let waypoints: [String]
+    
 }
 
 extension Trip: Decodable {
