@@ -131,8 +131,8 @@
 		BFE917C01FE64660006F6A83 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				BFE917D31FE6474E006F6A83 /* TripTableViewCell.swift */,
 				BFE917D51FE647B0006F6A83 /* UserHeaderTableViewCell.swift */,
+				BFE917D31FE6474E006F6A83 /* TripTableViewCell.swift */,
 				BF3656301FEA7380009CAC4F /* TripHeaderTableViewCell.swift */,
 				BF3656321FEA7396009CAC4F /* WaypointTableViewCell.swift */,
 				BF3656381FED2B35009CAC4F /* FriendTableViewCell.swift */,

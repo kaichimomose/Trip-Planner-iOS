@@ -10,6 +10,8 @@ import UIKit
 
 class TripTableViewCell: UITableViewCell {
 
+    var completed: Bool = false
+    
     @IBOutlet weak var tripImage: UIImageView!
     @IBOutlet weak var tripNameLabel: UILabel!
     @IBOutlet weak var tripDateLabel: UILabel!
@@ -18,7 +20,12 @@ class TripTableViewCell: UITableViewCell {
     var trip: Trip? {
         didSet {
             tripNameLabel.text = trip?.tripName
-            
+            completed = trip?.completed ?? false
+            if completed {
+                checkLabel.text = "✔️"
+            } else {
+                checkLabel.text = ""
+            }
         }
     }
 }

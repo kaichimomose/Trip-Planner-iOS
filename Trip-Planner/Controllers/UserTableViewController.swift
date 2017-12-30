@@ -73,6 +73,7 @@ extension UserTableViewController: UITableViewDataSource, UITableViewDelegate {
         cell.userImage.layer.cornerRadius = cell.userImage.frame.width/2
         cell.userImage.layer.borderWidth = 2
         cell.userImage.layer.borderColor = UIColor.lightGray.cgColor
+        
         return cell
     }
     
@@ -94,6 +95,10 @@ extension UserTableViewController: UITableViewDataSource, UITableViewDelegate {
         cell.tripImage.layer.cornerRadius = 2
         cell.tripImage.layer.borderColor = UIColor.darkGray.cgColor
         cell.tripImage.layer.borderWidth = 1
+        
+        cell.checkLabel.layer.cornerRadius = 10
+        cell.checkLabel.layer.borderColor = UIColor.darkGray.cgColor
+        cell.checkLabel.layer.borderWidth = 2
         
         cell.trip = self.trips[row]
         

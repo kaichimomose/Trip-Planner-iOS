@@ -11,7 +11,7 @@ import UIKit
 class TripTableViewController: UIViewController, UITextFieldDelegate {
     
     var id: Int?
-    var numberOfCells: Int?
+    var extraCells: Int = 0
     var tripName: String = ""
     var completed: Bool = false
     var waypoints: [String] = []
@@ -32,7 +32,8 @@ class TripTableViewController: UIViewController, UITextFieldDelegate {
             
             self.tripName = trip.tripName
             self.completed = trip.completed
-            self.numberOfCells = trip.waypoints.count
+            self.waypoints = trip.waypoints
+//            self.numberOfCells = self.waypoints.count
         }
         
     }
@@ -55,6 +56,9 @@ class TripTableViewController: UIViewController, UITextFieldDelegate {
 //        if let waypoint = cell.waypointTextField.text {
 //            self.waypoints.append(waypoint)
 //        }
+        if headerCell.tripNameTextField.text != "" {
+            self.tripName = headerCell.tripNameTextField.text ?? "No Name"
+        }
         tableView.endEditing(true)
     }
     
@@ -65,23 +69,39 @@ class TripTableViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func addWaypointButtonTapped(_ sender: Any) {
-        if self.numberOfCells != nil {
-            self.numberOfCells! += 1
-        } else {
-            self.numberOfCells = 0
-            self.numberOfCells! += 1
+//        if self.numberOfCells != nil {
+//            self.numberOfCells! += 1
+//        } else {
+//            self.numberOfCells = 0
+//            self.numberOfCells! += 1
+//        }
+        if self.waypoints != [] {
+            self.addWaypoint()
         }
+        
+        
+        self.extraCells += 1
+        self.waypoints.append("")
         self.tableView.reloadData()
+    }
+    
+    func addWaypoint() {
+        self.waypoints = []
+        
+        for i in 0...tableView.visibleCells.count - 1{
+            let indexpathForWaypoints = NSIndexPath(row: i, section: 0)
+            let waypointTableViewCell = tableView.cellForRow(at: indexpathForWaypoints as IndexPath)! as! WaypointTableViewCell
+            let waypoint = waypointTableViewCell.waypointTextField.text
+            self.waypoints.append(waypoint!)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "save" {
-            
-            for i in 0...tableView.visibleCells.count - 1{
-                let indexpathForWaypoints = NSIndexPath(row: i, section: 0)
-                let waypointTableViewCell = tableView.cellForRow(at: indexpathForWaypoints as IndexPath)! as! WaypointTableViewCell
-                let waypoint = waypointTableViewCell.waypointTextField.text
-                self.waypoints.append(waypoint!)
+            if self.waypoints == [] || self.headerCell.tripNameTextField.text == ""{
+                return
+            } else {
+                self.addWaypoint()
             }
             
             if trip != nil {
@@ -121,6 +141,8 @@ extension TripTableViewController: UITableViewDataSource, UITableViewDelegate {
         
         if let trip = trip {
             headerCell.trip = trip
+        } else {
+            headerCell.tripNameTextField.text = self.tripName
         }
         
         headerCell.checkButton.layer.cornerRadius = 10
@@ -140,7 +162,7 @@ extension TripTableViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // returns the number of table view rows
-        let numberOfCells = self.numberOfCells ?? 0
+        let numberOfCells = self.waypoints.count
         return numberOfCells
     }
     
@@ -148,18 +170,25 @@ extension TripTableViewController: UITableViewDataSource, UITableViewDelegate {
         cell = tableView.dequeueReusableCell(withIdentifier: "WaypointCell", for: indexPath) as! WaypointTableViewCell
         let row = indexPath.row
         
-        if let trip = trip {
-            if row < trip.waypoints.count {
-                cell.waypointTextField.text = trip.waypoints[row]
-            }
-        }
+//        if trip != nil {
+//            if row < self.waypoints.count {
+//                cell.waypointTextField.text = self.waypoints[row]
+//            }
+//        }
         
-        cell.backgroundColor = UIColor.darkGray
+        cell.waypointTextField.text = self.waypoints[row]
         
         cell.waypointTextField.inputAccessoryView = toolBar
         
         return cell
     }
     
-    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        let row = indexPath.row
+        
+        if editingStyle == .delete {
+            self.waypoints.remove(at: row)
+            tableView.reloadData()
+        }
+    }
 }
