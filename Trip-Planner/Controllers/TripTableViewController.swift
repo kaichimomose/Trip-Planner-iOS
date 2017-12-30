@@ -108,7 +108,7 @@ class TripTableViewController: UIViewController, UITextFieldDelegate {
                 let newTrip = self.headerCell.tripNameTextField.text ?? ""
                 let newCompleted = self.headerCell.completed
                 
-                Networking().fetch(resource: .editTrip(id: (trip?.id)!, oldTrip: self.tripName, newTrip: newTrip, completed: newCompleted, waypoints: self.waypoints)) { (result) in
+                Networking().fetch(resource: .editTrip(id: (trip?.id)!, oldTrip: (trip?.tripName)!, newTrip: newTrip, completed: newCompleted, waypoints: self.waypoints)) { (result) in
                     DispatchQueue.main.async {
                         
                     }
