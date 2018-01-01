@@ -87,12 +87,28 @@
                                                         </stackView>
                                                     </subviews>
                                                 </stackView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sW5-bT-CSZ">
+                                                    <rect key="frame" x="233.5" y="68" width="95" height="23"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="23" id="niJ-Y4-FFc"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                                                    <state key="normal" title="Setting">
+                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="settingButtonTapped:" destination="tfj-KN-5s1" eventType="touchUpInside" id="30K-qS-t9H"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Gsg-Pc-u4m" firstAttribute="centerY" secondItem="OXd-mB-WfE" secondAttribute="centerY" id="6mg-1o-XNg"/>
+                                                <constraint firstItem="sW5-bT-CSZ" firstAttribute="width" secondItem="OXd-mB-WfE" secondAttribute="width" id="7jh-Z6-J6C"/>
                                                 <constraint firstItem="Gsg-Pc-u4m" firstAttribute="centerX" secondItem="zjm-ZL-zM1" secondAttribute="centerX" multiplier="0.4" id="MPB-Vv-lM9"/>
                                                 <constraint firstItem="Gsg-Pc-u4m" firstAttribute="top" secondItem="zjm-ZL-zM1" secondAttribute="topMargin" id="NJw-w6-Uif"/>
+                                                <constraint firstItem="sW5-bT-CSZ" firstAttribute="centerX" secondItem="OXd-mB-WfE" secondAttribute="centerX" id="Xlf-lG-Qjz"/>
                                                 <constraint firstAttribute="bottom" secondItem="Rkf-nG-iIY" secondAttribute="bottom" constant="15.5" id="axC-TK-08W"/>
+                                                <constraint firstItem="sW5-bT-CSZ" firstAttribute="top" secondItem="OXd-mB-WfE" secondAttribute="bottom" constant="8" id="ngi-eU-chb"/>
                                                 <constraint firstItem="Rkf-nG-iIY" firstAttribute="top" secondItem="Gsg-Pc-u4m" secondAttribute="bottom" constant="5" id="rdS-EA-DY8"/>
                                                 <constraint firstItem="Gsg-Pc-u4m" firstAttribute="centerX" secondItem="Rkf-nG-iIY" secondAttribute="centerX" id="vnF-iK-Gbh"/>
                                                 <constraint firstItem="OXd-mB-WfE" firstAttribute="centerX" secondItem="zjm-ZL-zM1" secondAttribute="centerX" multiplier="1.5" id="wlF-6f-Mnm"/>
@@ -102,6 +118,7 @@
                                         <connections>
                                             <outlet property="numberOfFriendsLabel" destination="nNh-Zo-jFW" id="h9j-Rd-Q04"/>
                                             <outlet property="numberOfTripsLabel" destination="W0E-tY-hnN" id="hHZ-1T-Xvc"/>
+                                            <outlet property="settingButton" destination="sW5-bT-CSZ" id="tOw-l0-842"/>
                                             <outlet property="userImage" destination="Gsg-Pc-u4m" id="TW0-Bg-rMG"/>
                                             <outlet property="usernameLabel" destination="Rkf-nG-iIY" id="S0n-HU-e7i"/>
                                         </connections>
@@ -198,7 +215,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1218" y="159"/>
+            <point key="canvasLocation" x="1216.8" y="158.77061469265368"/>
         </scene>
         <!--Friend Table View Controller-->
         <scene sceneID="KFX-34-O1u">
