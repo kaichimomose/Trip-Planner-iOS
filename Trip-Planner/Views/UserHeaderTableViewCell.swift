@@ -8,7 +8,11 @@
 
 import UIKit
 
-class UserHeaderTableViewCell: UITableViewCell {
+class UserHeaderTableViewCell: UITableViewCell, AlertPresentable {
+    func logoutAlert() {
+        <#code#>
+    }
+    
     
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var usernameLabel: UILabel!

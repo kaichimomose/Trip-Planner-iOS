@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 protocol AlertPresentable: class {
-    func selectAlert()
+    func logoutAlert()
 }
 
 extension AlertPresentable where Self: UIViewController {
@@ -33,38 +33,10 @@ extension AlertPresentable where Self: UIViewController {
         self.present(alertVC, animated: true, completion: nil)
     }
     
-    func goToShowCharactersVCAlert(closure: @escaping (_ showingStyle: ShowingStyle) -> ()){
-        let alertVC = UIAlertController(
-            title: "Challenge Selections",
-            message: "start practicing",
-            preferredStyle: .alert
-        )
-        
-        alertVC.addAction(
-            UIAlertAction(
-                title: "following the order",
-                style: .default,
-                handler: { (action) in
-                    closure(.order)
-            })
-        )
-        
-        alertVC.addAction(
-            UIAlertAction(
-                title: "random order",
-                style: .default,
-                handler: { (action) in
-                    closure(.random)
-            })
-        )
-        
-        self.present(alertVC, animated: true, completion: nil)
-    }
-    
-    func jumpToJCTVCAlert(character: String, closure: @escaping () -> (), sound: @escaping (_ string: String) -> ()){
+    func logoutAlert(logout: @escaping () -> (), delete: @escaping () -> ()){
         let alertVC = UIAlertController(
             title: "Practice?",
-            message: "start practicing '\(character)'",
+            message: "start practicing",
             preferredStyle: .actionSheet
         )
         
@@ -79,19 +51,19 @@ extension AlertPresentable where Self: UIViewController {
         
         alertVC.addAction(
             UIAlertAction(
-                title: "Yes",
+                title: "Logout",
                 style: .default,
                 handler: { (action) in
-                 closure()
+                 logout()
             })
         )
         
         alertVC.addAction(
             UIAlertAction(
-                title: "Check Sound",
-                style: .default,
+                title: "Delete",
+                style: .destructive,
                 handler: { (action) in
-                    sound(character)
+                 delete()
             })
         )
         

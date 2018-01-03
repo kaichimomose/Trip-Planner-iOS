@@ -15,6 +15,8 @@ class UserTableViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    var userHeaderCell = UserHeaderTableViewCell()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.rowHeight = UITableViewAutomaticDimension
