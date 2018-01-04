@@ -18,8 +18,8 @@ enum HttpMethod: String {
 enum Resource {
     case signUp(email: String, password: String)
     case login(email: String, password: String)
-    case editProfile
-    case deleteAccount
+    case editProfile(username: String, newUsername: String)
+    case deleteAccount(id: Int)
     
     case myTrip(id: Int)
     case postTrip(id: Int, tripName: String, completed: Bool, waypoints: [String])
@@ -67,7 +67,7 @@ enum Resource {
         switch self {
         case .findFriend(let username):
             return ["username": username]
-        case .myTrip(let id):
+        case .myTrip(let id), .deleteAccount(let id):
             return ["id": String(id)]
         default:
             return [:]
@@ -78,6 +78,10 @@ enum Resource {
         switch self {
         case let .signUp(email, password):
             let json = ["username": email, "password": password, "name": "", "trips_count": 0, "id": 0] as [String: Any]
+            let data = try? JSONSerialization.data(withJSONObject: json, options: [])
+            return data
+        case let .editProfile(username, newUsername):
+            let json = ["username": username, "new_username": newUsername] as [String: Any]
             let data = try? JSONSerialization.data(withJSONObject: json, options: [])
             return data
         case let .postTrip(id, tripName, completed, waypoints):

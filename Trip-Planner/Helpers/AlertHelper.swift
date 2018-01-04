@@ -33,7 +33,7 @@ extension AlertPresentable where Self: UIViewController {
         self.present(alertVC, animated: true, completion: nil)
     }
     
-    func logoutAlert(logout: @escaping () -> (), delete: @escaping () -> ()){
+    func logoutAlert(editName: @escaping () -> (), logout: @escaping () -> (), delete: @escaping () -> ()){
         let alertVC = UIAlertController(
             title: "Practice?",
             message: "start practicing",
@@ -46,6 +46,15 @@ extension AlertPresentable where Self: UIViewController {
                 style: .cancel,
                 handler: { (action) in
                     
+            })
+        )
+        
+        alertVC.addAction(
+            UIAlertAction(
+                title: "Change username",
+                style: .default,
+                handler: { (action) in
+                    editName()
             })
         )
         

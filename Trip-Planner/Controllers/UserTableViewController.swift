@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UserTableViewController: UIViewController {
+class UserTableViewController: UIViewController, AlertPresentable {
     
     var user: User?
     var trips = [Trip]()
@@ -46,10 +46,34 @@ class UserTableViewController: UIViewController {
     @IBAction func unwindToUserTableViewController(_ segue: UIStoryboardSegue) {
     }
     
+    @IBAction func settingButtonTapped(_ sender: Any) {
+        logoutAlert(logout: <#T##() -> ()#>, delete: deleteUser)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "trip" {
             let tripTVC = segue.destination as! TripTableViewController
             tripTVC.id = user?.id
+        }
+    }
+    
+    func logout() {
+        
+    }
+    
+    func deleteUser() {
+        Networking().fetch(resource: .deleteAccount(id: (user?.id)!)) { (result) in
+            DispatchQueue.main.async {
+                
+            }
+        }
+    }
+    
+    func editName() {
+        Networking().fetch(resource: .editProfile(username: <#T##String#>, newUsername: <#T##String#>)) { (result) in
+            DispatchQueue.main.async {
+                
+            }
         }
     }
 }

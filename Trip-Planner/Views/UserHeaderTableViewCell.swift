@@ -8,18 +8,12 @@
 
 import UIKit
 
-class UserHeaderTableViewCell: UITableViewCell, AlertPresentable {
-    func logoutAlert() {
-        <#code#>
-    }
+class UserHeaderTableViewCell: UITableViewCell {
     
     
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var numberOfTripsLabel: UILabel!
     @IBOutlet weak var numberOfFriendsLabel: UILabel!
-    
-    @IBOutlet weak var settingButton: UIButton!
-    @IBAction func settingButtonTapped(_ sender: Any) {
-    }
+
 }
