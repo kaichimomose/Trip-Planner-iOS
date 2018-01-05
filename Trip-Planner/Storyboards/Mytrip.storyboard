@@ -317,6 +317,9 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="Kzx-nl-bnf" id="Ho5-vX-sag"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -448,6 +451,9 @@
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="okE-fw-9Ag" id="XMN-Ao-Shn"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>

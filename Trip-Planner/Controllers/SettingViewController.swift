@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SettingViewController: UIViewController {
+class SettingViewController: UIViewController, UITextFieldDelegate {
     
     var user: User?
     
@@ -62,8 +62,19 @@ class SettingViewController: UIViewController {
     
     func deleteUser() {
         Networking().fetch(resource: .deleteAccount(id: (user?.id)!)) { (result) in
-    
+            DispatchQueue.main.async {
+                let initialViewController: UIViewController
+                let storyboard = UIStoryboard(name: "Login", bundle: nil)
+                initialViewController = storyboard.instantiateInitialViewController()!
+                
+                self.view.window?.rootViewController = initialViewController
+                self.view.window?.makeKeyAndVisible()
+            }
         }
     }
 
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }

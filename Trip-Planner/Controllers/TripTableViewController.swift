@@ -68,9 +68,14 @@ class TripTableViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        if textField.frame.origin.y > tableView.frame.height - 250 {
-            
+        let pointInTable = textField.superview?.convert(textField.frame, to: tableView)
+        if (pointInTable?.minY)! > tableView.frame.height - 250 {
+            tableView.setContentOffset(CGPoint.init(x: 0, y: 250), animated: true)
         }
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        tableView.setContentOffset(CGPoint.init(x: 0, y: 0), animated: true)
     }
     
     @IBAction func addWaypointButtonTapped(_ sender: Any) {

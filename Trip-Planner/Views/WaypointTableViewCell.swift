@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WaypointTableViewCell: UITableViewCell {
+class WaypointTableViewCell: UITableViewCell, UITextFieldDelegate {
 
     @IBOutlet weak var waypointTextField: UITextField!
     
