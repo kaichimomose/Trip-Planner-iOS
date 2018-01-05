@@ -67,6 +67,11 @@ class TripTableViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField.frame.origin.y > tableView.frame.height - 250 {
+            
+        }
+    }
     
     @IBAction func addWaypointButtonTapped(_ sender: Any) {
 //        if self.numberOfCells != nil {

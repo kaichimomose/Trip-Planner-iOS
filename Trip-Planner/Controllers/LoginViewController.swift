@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passWordTextField: UITextField!
@@ -24,6 +24,7 @@ class LoginViewController: UIViewController {
         self.warningLabel.layer.cornerRadius = 3
         self.warningLabel.layer.borderColor = UIColor.red.cgColor
         self.warningLabel.layer.borderWidth = 1
+        self.warningLabel.isHidden = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,7 +38,10 @@ class LoginViewController: UIViewController {
         if username != "" && passWord != "" {
             Networking().fetch(resource: .login(email: username!, password: passWord!)) { (result) in
                 DispatchQueue.main.async {
-                    guard let user = result as? User else {return}
+                    guard let user = result as? User else {
+                        return
+                    }
+                    print("result exists")
 //                    self.user = user
                     User.setCurrent(user)
                     
@@ -61,6 +65,13 @@ class LoginViewController: UIViewController {
             }
         }
     
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        textField.resignFirstResponder()
+        
+        return true
     }
     
     /*

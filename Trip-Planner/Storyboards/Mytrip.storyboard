@@ -183,7 +183,7 @@
                         <barButtonItem key="leftBarButtonItem" title="Setting" id="cKd-UG-tue">
                             <connections>
                                 <action selector="settingButtonTapped:" destination="sqP-9d-dgd" id="lk7-Mb-8ty"/>
-                                <segue destination="Kzx-nl-bnf" kind="show" id="qDb-3S-nNi"/>
+                                <segue destination="Kzx-nl-bnf" kind="show" identifier="setting" id="qDb-3S-nNi"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Ykz-V6-BXm">
@@ -292,10 +292,10 @@
             </objects>
             <point key="canvasLocation" x="2430" y="630"/>
         </scene>
-        <!--View Controller-->
+        <!--Setting View Controller-->
         <scene sceneID="tde-ES-Q34">
             <objects>
-                <viewController id="Kzx-nl-bnf" sceneMemberID="viewController">
+                <viewController id="Kzx-nl-bnf" customClass="SettingViewController" customModule="Trip_Planner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3Ec-6q-jV1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -326,12 +326,18 @@
                                         <state key="normal" title="Set New Username">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="serButtonTapped:" destination="Kzx-nl-bnf" eventType="touchUpInside" id="oB6-Qk-IO6"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iSe-l7-c2r">
                                         <rect key="frame" x="0.0" y="140" width="275" height="30"/>
                                         <state key="normal" title="Delete Account">
                                             <color key="titleColor" red="0.97365993920000005" green="0.27973090280000001" blue="0.13582356770000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="deleteButtonTapped:" destination="Kzx-nl-bnf" eventType="touchUpInside" id="XFt-1z-g6S"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -349,6 +355,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aO3-Ka-bah"/>
                     </view>
+                    <connections>
+                        <outlet property="newUsernameTextField" destination="oQB-kl-0Bk" id="ne9-Rs-bwK"/>
+                        <outlet property="setButton" destination="BsE-56-SC6" id="zH1-fO-xIx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t23-gI-x3v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -49,6 +49,9 @@ class Networking {
                         completion(aTripsList)
                 }
             }
+            if let res = res {
+                print(res)
+            }
         }.resume()
     }
 }

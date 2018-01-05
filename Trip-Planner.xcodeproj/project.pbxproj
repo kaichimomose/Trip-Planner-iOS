@@ -32,6 +32,7 @@
 		BFE917DE1FE6505E006F6A83 /* Friends.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFE917DA1FE6505E006F6A83 /* Friends.storyboard */; };
 		BFE917DF1FE6505E006F6A83 /* Mytrip.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFE917DB1FE6505E006F6A83 /* Mytrip.storyboard */; };
 		BFE917E01FE6505E006F6A83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFE917DC1FE6505E006F6A83 /* Main.storyboard */; };
+		BFFB55431FFEFFAD00ACDC8F /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFB55421FFEFFAD00ACDC8F /* SettingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		BFE917DA1FE6505E006F6A83 /* Friends.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Friends.storyboard; sourceTree = "<group>"; };
 		BFE917DB1FE6505E006F6A83 /* Mytrip.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Mytrip.storyboard; sourceTree = "<group>"; };
 		BFE917DC1FE6505E006F6A83 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		BFFB55421FFEFFAD00ACDC8F /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 				BF3656341FEA7454009CAC4F /* TripTableViewController.swift */,
 				BF3656361FED2B12009CAC4F /* FriendTableViewController.swift */,
 				BF36563A1FEE91FB009CAC4F /* RecentTripTableViewController.swift */,
+				BFFB55421FFEFFAD00ACDC8F /* SettingViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				BF3656331FEA7396009CAC4F /* WaypointTableViewCell.swift in Sources */,
 				BF36563B1FEE91FB009CAC4F /* RecentTripTableViewController.swift in Sources */,
 				BF3656371FED2B12009CAC4F /* FriendTableViewController.swift in Sources */,
+				BFFB55431FFEFFAD00ACDC8F /* SettingViewController.swift in Sources */,
 				BFE917D81FE647E4006F6A83 /* UserTableViewController.swift in Sources */,
 				BF9B20CA1FD8BEE200776A67 /* AppDelegate.swift in Sources */,
 				BFE917CF1FE64660006F6A83 /* Networking.swift in Sources */,

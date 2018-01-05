@@ -90,7 +90,7 @@
                   moduleName = "Trip-Planner"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/kaichimomose/Desktop/Trip-Planner/Trip-Planner/Controllers/TripTableViewController.swift"
-                  timestampString = "536297327.405699"
+                  timestampString = "536815864.59693"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "111"
@@ -105,7 +105,7 @@
                   moduleName = "Trip-Planner"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/kaichimomose/Desktop/Trip-Planner/Trip-Planner/Controllers/TripTableViewController.swift"
-                  timestampString = "536297327.409695"
+                  timestampString = "536815864.60334"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "111"
@@ -120,7 +120,7 @@
                   moduleName = "Trip-Planner"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/kaichimomose/Desktop/Trip-Planner/Trip-Planner/Controllers/TripTableViewController.swift"
-                  timestampString = "536297327.415067"
+                  timestampString = "536815864.608987"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "112"
@@ -128,6 +128,181 @@
                   offsetFromSymbolStart = "14">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Trip-Planner/Controllers/UserTableViewController.swift"
+            timestampString = "536815864.39774"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "prepare(for:sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Trip-Planner/Controllers/UserTableViewController.swift"
+            timestampString = "536815864.397829"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Trip-Planner/Controllers/LoginViewController.swift"
+            timestampString = "536815864.397905"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "signInButtonTapped(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Trip-Planner/Controllers/LoginViewController.swift"
+            timestampString = "536815864.398331"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "signInButtonTapped(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Trip_Planner.LoginViewController.signInButtonTapped(Any) -&gt; ()"
+                  moduleName = "Trip-Planner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kaichimomose/Desktop/Trip-Planner/Trip-Planner/Controllers/LoginViewController.swift"
+                  timestampString = "536815864.65003"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "1478">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Decodable) -&gt; () in Trip_Planner.LoginViewController.signInButtonTapped(Any) -&gt; ()"
+                  moduleName = "Trip-Planner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kaichimomose/Desktop/Trip-Planner/Trip-Planner/Controllers/LoginViewController.swift"
+                  timestampString = "536815864.653477"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "21">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 (Swift.Decodable) -&gt; () in Trip_Planner.LoginViewController.signInButtonTapped(Any) -&gt; ()"
+                  moduleName = "Trip-Planner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kaichimomose/Desktop/Trip-Planner/Trip-Planner/Controllers/LoginViewController.swift"
+                  timestampString = "536815864.657097"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "18">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Trip-Planner/Network/Networking.swift"
+            timestampString = "536815864.398667"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "fetch(resource:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__ObjC.URLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Trip_Planner.Networking.fetch(resource: Trip_Planner.Resource, completion: (Swift.Decodable) -&gt; ()) -&gt; ()"
+                  moduleName = "Trip-Planner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kaichimomose/Desktop/Trip-Planner/Trip-Planner/Network/Networking.swift"
+                  timestampString = "536815864.667071"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "3030">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__ObjC.URLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Trip_Planner.Networking.fetch(resource: Trip_Planner.Resource, completion: (Swift.Decodable) -&gt; ()) -&gt; ()"
+                  moduleName = "Trip-Planner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kaichimomose/Desktop/Trip-Planner/Trip-Planner/Network/Networking.swift"
+                  timestampString = "536815864.670525"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "3257">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Trip-Planner/Network/Networking.swift"
+            timestampString = "536815864.398738"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "fetch(resource:completion:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
