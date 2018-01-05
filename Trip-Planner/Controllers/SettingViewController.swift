@@ -34,12 +34,10 @@ class SettingViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func deleteButtonTapped(_ sender: Any) {
         deleteUser()
+        // back to login window
         let initialViewController: UIViewController
         let storyboard = UIStoryboard(name: "Login", bundle: nil)
         initialViewController = storyboard.instantiateInitialViewController()!
-        
-        //                    initialViewController.user = self.user
-        
         self.view.window?.rootViewController = initialViewController
         self.view.window?.makeKeyAndVisible()
         
@@ -62,14 +60,6 @@ class SettingViewController: UIViewController, UITextFieldDelegate {
     
     func deleteUser() {
         Networking().fetch(resource: .deleteAccount(id: (user?.id)!)) { (result) in
-            DispatchQueue.main.async {
-                let initialViewController: UIViewController
-                let storyboard = UIStoryboard(name: "Login", bundle: nil)
-                initialViewController = storyboard.instantiateInitialViewController()!
-                
-                self.view.window?.rootViewController = initialViewController
-                self.view.window?.makeKeyAndVisible()
-            }
         }
     }
 
