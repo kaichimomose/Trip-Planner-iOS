@@ -90,7 +90,7 @@
                   moduleName = "Trip-Planner"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/kaichimomose/Desktop/Trip-Planner/Trip-Planner/Controllers/TripTableViewController.swift"
-                  timestampString = "536866331.642698"
+                  timestampString = "537324955.7122051"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "121"
@@ -105,7 +105,7 @@
                   moduleName = "Trip-Planner"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/kaichimomose/Desktop/Trip-Planner/Trip-Planner/Controllers/TripTableViewController.swift"
-                  timestampString = "536866331.646452"
+                  timestampString = "537324955.715757"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "121"
@@ -120,7 +120,7 @@
                   moduleName = "Trip-Planner"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/kaichimomose/Desktop/Trip-Planner/Trip-Planner/Controllers/TripTableViewController.swift"
-                  timestampString = "536866331.650468"
+                  timestampString = "537324955.719216"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "122"
@@ -143,6 +143,86 @@
             startingLineNumber = "70"
             endingLineNumber = "70"
             landmarkName = "textFieldDidBeginEditing(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Trip-Planner/AppDelegate.swift"
+            timestampString = "537324955.489535"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Trip-Planner/Controllers/LoginViewController.swift"
+            timestampString = "537324955.489769"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "signInButtonTapped(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Trip-Planner/Controllers/UserTableViewController.swift"
+            timestampString = "537323655.66671"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Trip-Planner/Network/User.swift"
+            timestampString = "537324955.490063"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "setCurrent(_:writeToUserDefaults:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Trip-Planner/Network/User.swift"
+            timestampString = "537324955.4902149"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "setCurrent(_:writeToUserDefaults:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

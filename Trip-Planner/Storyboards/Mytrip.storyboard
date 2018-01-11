@@ -301,7 +301,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="phJ-9Z-811">
-                                <rect key="frame" x="50" y="248.5" width="275" height="170"/>
+                                <rect key="frame" x="50" y="213.5" width="275" height="240"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZsG-HG-Sut">
                                         <rect key="frame" x="0.0" y="0.0" width="275" height="30"/>
@@ -333,8 +333,15 @@
                                             <action selector="serButtonTapped:" destination="Kzx-nl-bnf" eventType="touchUpInside" id="oB6-Qk-IO6"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iSe-l7-c2r">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R0w-1M-n8T">
                                         <rect key="frame" x="0.0" y="140" width="275" height="30"/>
+                                        <state key="normal" title="Log out"/>
+                                        <connections>
+                                            <action selector="logoutButtonTapped:" destination="Kzx-nl-bnf" eventType="touchUpInside" id="TwP-ze-9Rw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iSe-l7-c2r">
+                                        <rect key="frame" x="0.0" y="210" width="275" height="30"/>
                                         <state key="normal" title="Delete Account">
                                             <color key="titleColor" red="0.97365993920000005" green="0.27973090280000001" blue="0.13582356770000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -345,6 +352,7 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="ZsG-HG-Sut" firstAttribute="width" secondItem="phJ-9Z-811" secondAttribute="width" id="S9m-t6-sLC"/>
+                                    <constraint firstItem="R0w-1M-n8T" firstAttribute="width" secondItem="phJ-9Z-811" secondAttribute="width" id="Z9P-NX-IaT"/>
                                     <constraint firstItem="iSe-l7-c2r" firstAttribute="width" secondItem="phJ-9Z-811" secondAttribute="width" id="cv0-07-ezE"/>
                                     <constraint firstItem="BsE-56-SC6" firstAttribute="width" secondItem="phJ-9Z-811" secondAttribute="width" id="wWK-be-4AK"/>
                                 </constraints>

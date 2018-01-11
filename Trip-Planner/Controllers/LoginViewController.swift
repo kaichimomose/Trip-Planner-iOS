@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import KeychainSwift
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
 
@@ -16,6 +17,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var warningLabel: UILabel!
     
     var user: User!
+    let keychain = KeychainSwift()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +27,14 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.warningLabel.layer.borderColor = UIColor.red.cgColor
         self.warningLabel.layer.borderWidth = 1
         self.warningLabel.isHidden = true
+        
+        if let username = self.keychain.get("username") {
+            userNameTextField.text = username
+        }
+        if let password = self.keychain.get("password") {
+            passWordTextField.text = password
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,7 +53,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     }
                     print("result exists")
 //                    self.user = user
-                    User.setCurrent(user)
+                    
+                    //set username and password in keychain
+                    self.keychain.set(username!, forKey: "username")
+                    self.keychain.set(passWord!, forKey: "password")
+                    
+                    //save userdefault
+                    User.setCurrent(user, writeToUserDefaults: true)
                     
                     let initialViewController: UIViewController
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)

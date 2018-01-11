@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import KeychainSwift
 
 class SignUpViewController: UIViewController, UITextFieldDelegate {
 
+    let keychain = KeychainSwift()
+    
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var createAccountButton: UIButton!
@@ -32,8 +35,13 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             Networking().fetch(resource: .signUp(email: username!, password: passWord!)) { (result) in
                 DispatchQueue.main.async {
                     guard let user = result as? User else {return}
-                    //                    self.user = user
-                    User.setCurrent(user)
+                    
+                    //set username and password in keychain
+                    self.keychain.set(username!, forKey: "username")
+                    self.keychain.set(passWord!, forKey: "password")
+                    
+                    //save userdefault
+                    User.setCurrent(user, writeToUserDefaults: true)
                     
                     let initialViewController: UIViewController
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)

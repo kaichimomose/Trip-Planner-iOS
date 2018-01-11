@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import KeychainSwift
 
 class SettingViewController: UIViewController, UITextFieldDelegate {
     
     var user: User?
+    let keychain = KeychainSwift()
     
     @IBOutlet weak var newUsernameTextField: UITextField!
     @IBOutlet weak var setButton: UIButton!
@@ -34,13 +36,26 @@ class SettingViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func deleteButtonTapped(_ sender: Any) {
         deleteUser()
+        
+        // delete username and password from keychain
+        keychain.delete("username")
+        keychain.delete("password")
+        
+        // back to login window
+        backToLoginWindow()
+        
+    }
+    @IBAction func logoutButtonTapped(_ sender: Any) {
+        backToLoginWindow()
+    }
+    
+    func backToLoginWindow() {
         // back to login window
         let initialViewController: UIViewController
         let storyboard = UIStoryboard(name: "Login", bundle: nil)
         initialViewController = storyboard.instantiateInitialViewController()!
         self.view.window?.rootViewController = initialViewController
         self.view.window?.makeKeyAndVisible()
-        
     }
     
     func editName() {
@@ -49,8 +64,11 @@ class SettingViewController: UIViewController, UITextFieldDelegate {
             Networking().fetch(resource: .editProfile(username: (user?.username)!, newUsername: newUsername!)) { (result) in
                 DispatchQueue.main.async {
                     guard let user = result as? User else {return}
-                    //                    self.user = user
-                    User.setCurrent(user)
+                    
+                    //set username in keychain
+                    self.keychain.set(newUsername!, forKey: "username")
+                    
+                    User.setCurrent(user, writeToUserDefaults: true)
                 }
             }
         } else {
